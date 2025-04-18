@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafc;
+      color: #334464;
+    }
+    header, footer {
+      background-color: #334464;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    main {
+      padding: 3rem 5%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: space-between;
+    }
+    .contact-info, .contact-form {
+      flex: 1 1 45%;
+    }
+    h2 {
+      color: #2f5c73;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 1rem 0;
+      font-size: 1.1em;
+    }
+    ul li a {
+      text-decoration: none;
+      color: #334464;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    form button {
+      padding: 0.8rem 2rem;
+      background-color: #2f5c73;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #334464;
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <img src="assets/images/profile.jpg" alt="Profile Photo" class="profile-img" style="width: 120px; height: 120px; border-radius: 50%; margin-top: 1rem; object-fit: cover; border: 4px solid #2f5c73;"/>
+    <h1 style="margin: 0.5rem 0;">Darshit Rajyaguru</h1>
+    <p style="margin-bottom: 1rem;">Let's connect to discuss.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contact-info" data-aos="fade-right">
+      <h2>Let's Connect</h2>
+      <ul>
+        <li>📧 <a href="mailto:darshitrajyaguru@gmail.com">darshitrajyaguru@gmail.com</a></li>
+        <li>📞 <a href="tel:+918460388441">+91 8460388441</a></li>
+        <li>👤 <a href="https://linkedin.com/in/darshit-rajyaguru" target="_blank">LinkedIn</a></li>
+        <li>💻 <a href="https://github.com/DarshitRajyaguru" target="_blank">GitHub</a></li>
+        <li>🌐 <a href="https://profiles.wordpress.org/darshitrajyaguru97/" target="_blank">WordPress Profile</a></li>
+      </ul>
+    </div>
+
+    <div class="contact-form" data-aos="fade-left">
+      <h2>Send a Message</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <footer data-aos="fade-up">
+    <p>© 2025 Darshit Rajyaguru • <a href="mailto:darshitrajyaguru@gmail.com" style="color: white;">darshitrajyaguru@gmail.com</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WordPress Developer Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Playfair Display', serif; margin: 0; background-color: #f9fafc; color: #334464; }
+    header, footer { background-color: #334464; color: white; text-align: center; padding: 2rem; }
+    nav a { margin: 0 1rem; color: white; text-decoration: none; font-weight: bold; }
+    main { padding: 3rem 5%; }
+    section { margin-bottom: 4rem; }
+    .grid-container { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+    .grid-item { width: 300px; background: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 1rem; text-align: center; transition: transform 0.3s ease; }
+    .grid-item:hover { transform: translateY(-5px); }
+    .grid-item img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
+    .cta { text-align: center; margin-top: 2rem; }
+    .cta a { background-color: #2f5c73; color: white; padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none; }
+    .cta a:hover { background-color: #334464; }
+    .hero { text-align: center; padding: 3rem 1rem; }
+    .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.2rem; color: #2f5c73; }
+    .profile-img { width: 140px; height: 140px; border-radius: 50%; margin-top: 1rem; object-fit: cover; border: 4px solid #2f5c73; }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <img src="assets/images/profile.jpg" alt="Profile Photo" class="profile-img"/>
+    <h1>Darshit Rajyaguru</h1>
+    <p>Professional WordPress Developer</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="hero" data-aos="fade-up">
+      <h1>I Build Custom WordPress Solutions</h1>
+      <p>From fast-loading eCommerce stores to scalable business websites – I help clients grow with robust WordPress development.</p>
+      <div class="cta">
+        <a href="contact.html">Hire Me</a>
+      </div>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="100">
+      <h2>About Me</h2>
+      <p>
+        With 4+ years of experience in WordPress development, I design and develop high-performance, custom websites using tools like Elementor Pro, Divi, WP Bakery, and WooCommerce. I also specialize in custom plugin and theme development, API integration, SEO optimization, and Figma-to-WordPress design implementation.
+      </p>
+      <a href="about.html">Learn more about me →</a>
+    </section>
+
+    <section class="featured-projects" data-aos="fade-up" data-aos-delay="200">
+      <h2>Featured Projects</h2>
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src="assets/images/cf7toanyapi.png" alt="ContactFormToAPI" />
+          <h3>ContactFormToAPI</h3>
+          <a href="projects.html">View Details</a>
+        </div>
+        <div class="grid-item">
+          <img src="assets/images/iDalko.jpeg" alt="iDalko" />
+          <h3>iDalko</h3>
+          <a href="projects.html">View Details</a>
+        </div>
+        <div class="grid-item">
+          <img src="assets/images/Standby24.jpeg" alt="StandBy24 UK" />
+          <h3>StandBy24 UK</h3>
+          <a href="projects.html">View Details</a>
+        </div>
+      </div>
+      <div class="cta">
+        <a href="projects.html">View All Projects</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer data-aos="fade-up">
+    <p>© 2025 Darshit Rajyaguru • <a href="mailto:darshitrajyaguru@gmail.com" style="color:white;">darshitrajyaguru@gmail.com</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>

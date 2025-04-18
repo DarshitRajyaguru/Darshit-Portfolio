@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+header, footer {
+  background-color: #334464;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+main {
+  padding: 2em;
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+.project {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
+.project h3 {
+  margin: 0 0 0.5em;
+}
+.project a {
+  color: #334464;
+  text-decoration: none;
+  font-weight: bold;
+}
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+.popup-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2em;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5em;
+}
+.grid-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.grid-item img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 140px;
+}
+.grid-item h3 {
+  margin: 0.5em 0;
+}
+.view-details {
+  background: #334464;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5em;
+}
