@@ -20,40 +20,77 @@
       padding: 2rem;
       text-align: center;
     }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2f5c73;
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     main {
       padding: 3rem 5%;
+    }
+
+    .contact-grid {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 2rem;
-      align-items: center;
+      justify-content: center;
     }
-    .contact-info {
-      max-width: 600px;
+
+    .contact-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
       text-align: center;
+      flex: 1 1 calc(33.333% - 2rem);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    h2 {
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+
+    .contact-card a {
       color: #2f5c73;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin: 1rem 0;
-      font-size: 1.1em;
-    }
-    ul li a {
+      font-weight: bold;
       text-decoration: none;
-      color: #334464;
+      font-size: 1.05em;
     }
-    ul li a:hover {
+
+    .contact-card a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .contact-card {
+        flex: 1 1 calc(50% - 2rem);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .contact-card {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
   <header data-aos="fade-down">
-    <img src="assets/images/profile.jpg" alt="Profile Photo" class="profile-img" style="width: 120px; height: 120px; border-radius: 50%; margin-top: 1rem; object-fit: cover; border: 4px solid #2f5c73;"/>
+    <img src="assets/images/profile.jpg" alt="Profile Photo" />
     <h1 style="margin: 0.5rem 0;">Darshit Rajyaguru</h1>
     <p style="margin-bottom: 1rem;">Let's connect to discuss.</p>
     <nav>
@@ -65,16 +102,14 @@
   </header>
 
   <main>
-    <div class="contact-info" data-aos="fade-up">
-      <h2>Let's Connect</h2>
-      <p>Feel free to reach out to me directly via the links below.</p>
-      <ul>
-        <li>📧 <a href="mailto:darshitrajyaguru@gmail.com">darshitrajyaguru@gmail.com</a></li>
-        <li>📞 <a href="tel:+918460388441">+91 8460388441</a></li>
-        <li>👤 <a href="https://linkedin.com/in/darshit-rajyaguru" target="_blank">LinkedIn</a></li>
-        <li>💻 <a href="https://github.com/DarshitRajyaguru" target="_blank">GitHub</a></li>
-        <li>🌐 <a href="https://profiles.wordpress.org/darshitrajyaguru97/" target="_blank">WordPress Profile</a></li>
-      </ul>
+    <h2 style="text-align: center; color: #2f5c73;">Connect with Me</h2>
+    <div class="contact-grid" data-aos="fade-up">
+      <div class="contact-card">📧 <br><a href="mailto:darshitrajyaguru@gmail.com">darshitrajyaguru@gmail.com</a></div>
+      <div class="contact-card">📞 <br><a href="tel:+918460388441">+91 84603 88441</a></div>
+      <div class="contact-card">👤 <br><a href="https://linkedin.com/in/darshit-rajyaguru" target="_blank">LinkedIn Profile</a></div>
+      <div class="contact-card">💻 <br><a href="https://github.com/DarshitRajyaguru" target="_blank">GitHub Profile</a></div>
+      <div class="contact-card">🌐 <br><a href="https://profiles.wordpress.org/darshitrajyaguru97/" target="_blank">WordPress Profile</a></div>
+      <div class="contact-card">📄 <br><a href="assets/Darshit-Rajyaguru-CV.pdf" download>Download CV</a></div>
     </div>
   </main>
 
