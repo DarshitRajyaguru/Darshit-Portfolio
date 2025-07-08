@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vxY3pzyGupkli5GQImsS1a3MGYRVX8OaCZT7x4qITfZ9r9Yh7DYzrRAv9XGuDrW9M1h84hIpjXZTX3k3rYV7Ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
   <style>
     body {
       font-family: 'Playfair Display', serif;
@@ -39,18 +39,15 @@
     nav a:hover {
       text-decoration: underline;
     }
-
     main {
       padding: 3rem 5%;
     }
-
     .contact-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: center;
     }
-
     .contact-card {
       background: #fff;
       padding: 2rem;
@@ -60,34 +57,31 @@
       flex: 1 1 calc(33.333% - 2rem);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .contact-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 24px rgba(0,0,0,0.12);
     }
-
+    .contact-card i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #2f5c73;
+    }
     .contact-card a {
       color: #2f5c73;
       font-weight: bold;
       text-decoration: none;
       font-size: 1.05em;
+      display: inline-block;
+      margin-top: 0.5rem;
     }
-
     .contact-card a:hover {
       text-decoration: underline;
     }
-    .icon-large {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #2f5c73;
-    }
-
     @media (max-width: 900px) {
       .contact-card {
         flex: 1 1 calc(50% - 2rem);
       }
     }
-
     @media (max-width: 600px) {
       .contact-card {
         flex: 1 1 100%;
@@ -112,30 +106,30 @@
     <h2 style="text-align: center; color: #2f5c73;">Connect with Me</h2>
     <div class="contact-grid" data-aos="fade-up">
       <div class="contact-card">
-        <i class="fas fa-envelope icon-large"></i><br>
+        <i class="fas fa-envelope"></i><br>
         <a href="mailto:darshitrajyaguru@gmail.com">darshitrajyaguru@gmail.com</a>
       </div>
       <div class="contact-card">
-        <i class="fas fa-phone icon-large"></i><br>
+        <i class="fas fa-phone"></i><br>
         <a href="tel:+918460388441">+91 84603 88441</a>
       </div>
       <div class="contact-card">
-        <i class="fab fa-linkedin icon-large"></i><br>
-        <a href="https://linkedin.com/in/darshit-rajyaguru" target="_blank">LinkedIn</a>
+        <i class="fab fa-linkedin"></i><br>
+        <a href="https://linkedin.com/in/darshit-rajyaguru" target="_blank">LinkedIn Profile</a>
       </div>
       <div class="contact-card">
-        <i class="fab fa-github icon-large"></i><br>
-        <a href="https://github.com/DarshitRajyaguru" target="_blank">GitHub</a>
+        <i class="fab fa-github"></i><br>
+        <a href="https://github.com/DarshitRajyaguru" target="_blank">GitHub Profile</a>
       </div>
       <div class="contact-card">
-        <i class="fab fa-wordpress icon-large"></i><br>
-        <a href="https://profiles.wordpress.org/darshitrajyaguru97/" target="_blank">WordPress</a>
+        <i class="fab fa-wordpress"></i><br>
+        <a href="https://profiles.wordpress.org/darshitrajyaguru97/" target="_blank">WordPress Profile</a>
       </div>
       <div class="contact-card">
-        <i class="fas fa-file-download icon-large"></i><br>
+        <i class="fas fa-file-download"></i><br>
         <a href="assets/Darshit-Rajyaguru-CV.pdf" download>Download CV</a>
       </div>
-    </div>    
+    </div>
   </main>
 
   <footer data-aos="fade-up">
