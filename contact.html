@@ -23,12 +23,13 @@
     main {
       padding: 3rem 5%;
       display: flex;
-      flex-wrap: wrap;
-      gap: 3rem;
-      justify-content: space-between;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
     }
-    .contact-info, .contact-form {
-      flex: 1 1 45%;
+    .contact-info {
+      max-width: 600px;
+      text-align: center;
     }
     h2 {
       color: #2f5c73;
@@ -45,24 +46,8 @@
       text-decoration: none;
       color: #334464;
     }
-    form input, form textarea {
-      width: 100%;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-    }
-    form button {
-      padding: 0.8rem 2rem;
-      background-color: #2f5c73;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: #334464;
+    ul li a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -80,8 +65,9 @@
   </header>
 
   <main>
-    <div class="contact-info" data-aos="fade-right">
+    <div class="contact-info" data-aos="fade-up">
       <h2>Let's Connect</h2>
+      <p>Feel free to reach out to me directly via the links below.</p>
       <ul>
         <li>📧 <a href="mailto:darshitrajyaguru@gmail.com">darshitrajyaguru@gmail.com</a></li>
         <li>📞 <a href="tel:+918460388441">+91 8460388441</a></li>
@@ -89,16 +75,6 @@
         <li>💻 <a href="https://github.com/DarshitRajyaguru" target="_blank">GitHub</a></li>
         <li>🌐 <a href="https://profiles.wordpress.org/darshitrajyaguru97/" target="_blank">WordPress Profile</a></li>
       </ul>
-    </div>
-
-    <div class="contact-form" data-aos="fade-left">
-      <h2>Send a Message</h2>
-      <form action="mail.php" method="post">
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Email Address" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
     </div>
   </main>
 
