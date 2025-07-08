@@ -55,6 +55,10 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.08);
       text-align: center;
       flex: 1 1 calc(33.333% - 2rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .contact-card:hover {
@@ -71,8 +75,9 @@
       font-weight: bold;
       text-decoration: none;
       font-size: 1.05em;
-      display: inline-block;
       margin-top: 0.5rem;
+      display: block;
+      text-align: center;
     }
     .contact-card a:hover {
       text-decoration: underline;
@@ -82,6 +87,9 @@
       height: 60px;
       margin-bottom: 1rem;
       object-fit: contain;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     @media (max-width: 900px) {
       .contact-card {
