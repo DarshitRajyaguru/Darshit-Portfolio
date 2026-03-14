@@ -1,556 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>My Projects</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
-      rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-    body {
-      font-family: 'Playfair Display', serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9fafc;
-      color: #334464;
-    }
-    header, footer {
-      background-color: #334464;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 3rem;
-    }
-    .grid-item {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease;
-      padding: 1rem;
-    }
-    .grid-item:hover {
-      transform: translateY(-5px);
-    }
-    .grid-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-    .view-details {
-      display: inline-block;
-      margin-top: 0.8rem;
-      padding: 0.6rem 1rem;
-      background-color: #2f5c73;
-      color: white;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-    .popup {
-      display: flex;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.4s ease, visibility 0.4s ease;
-    }
-
-    .popup.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .popup-content {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      width: 100%;
-      max-width: 800px;
-      max-height: 98vh; /* <--- restrict height to 90% of the viewport */
-      overflow-y: auto;  /* <--- make content scrollable if too tall */
-      position: relative;
-    }
-
-    .popup.active .popup-content {
-      transform: scale(1);
-      opacity: 1;
-    }
-
-  </style>
-  </head>
-  <body>
-    <header data-aos="fade-down">
-      <img src="assets/images/profile.jpg" alt="Profile Photo"
-        class="profile-img"
-        style="width: 120px; height: 120px; border-radius: 50%; margin-top: 1rem; object-fit: cover; border: 4px solid #2f5c73;" />
-      <h1 style="margin: 0.5rem 0;">Darshit Rajyaguru</h1>
-      <p style="margin-bottom: 1rem;">Explore my real-world client
-        implementations and custom WordPress solutions.</p>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Selected WordPress projects by Darshit Rajyaguru including custom development, recruitment platforms, SaaS, and WooCommerce implementations.">
+  <title>Projects | Darshit Rajyaguru</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrap" data-aos="fade-down">
+          <a class="brand" href="index.html">
+            <img src="assets/images/profile.jpg" alt="Darshit Rajyaguru" class="brand-mark">
+            <div class="brand-text">
+              <strong>Darshit Rajyaguru</strong>
+              <span>WordPress Expert • Core Contributor</span>
+            </div>
+          </a>
+          <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+            <span></span>
+          </button>
+          <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a class="active" href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
     </header>
+    <div class="menu-overlay"></div>
 
     <main>
-      <section class="grid-container" data-aos="fade-up">
-        <div class="grid-item">
-          <img src="assets/images/cf7toanyapi.png" alt="Contact Form to API">
-          <h3>Contact Form to API</h3>
-          <a href="javascript:void(0);" class="view-details"
-            data-target="popup1">View Details</a>
-        </div>
+      <section class="hero">
+        <div class="container page-panel">
+          <div class="hero-copy" data-aos="fade-up">
+            <div class="eyebrow">Selected Client Work</div>
+            <h1>WordPress projects built for real business needs and real users.</h1>
+            <p class="lead">These projects highlight custom interfaces, dynamic content systems, form workflows, performance improvements, and scalable WordPress implementation.</p>
+          </div>
 
-        <div class="grid-item">
-          <img src="assets/images/iDalko.jpeg" alt="iDalko">
-          <h3>iDalko</h3>
-          <a href="javascript:void(0);" class="view-details"
-            data-target="popup2">View Details</a>
-        </div>
-
-        <div class="grid-item">
-          <img src="assets/images/Standby24.jpeg" alt="Standby24">
-          <h3>Standby24</h3>
-          <a href="javascript:void(0);" class="view-details"
-            data-target="popup3">View Details</a>
-        </div>
-
-        <div class="grid-item">
-          <img src="assets/images/OneCall24 Healthcare.jpeg"
-            alt="OneCall24 Healthcare">
-          <h3>OneCall24 Healthcare</h3>
-          <a href="javascript:void(0);" class="view-details"
-            data-target="popup4">View Details</a>
-        </div>
-
-        <div class="grid-item">
-          <img src="assets/images/IMS nHance.jpeg" alt="IMS Nhance">
-          <h3>IMS Nhance</h3>
-          <a href="javascript:void(0);" class="view-details"
-            data-target="popup5">View Details</a>
-        </div>
-
-        <div class="grid-item">
-          <img src="assets/images/OneCall24.jpeg" alt="OneCall24">
-          <h3>OneCall24</h3>
-          <a href="javascript:void(0);" class="view-details"
-            data-target="popup6">View Details</a>
-        </div>
-
-        <div class="grid-item">
-          <img src="assets/images/Onecall24 Education.jpeg"
-            alt="OneCall24 Education">
-          <h3>OneCall24 Education</h3>
-          <a href="javascript:void(0);" class="view-details"
-            data-target="popup7">View Details</a>
-        </div>
-
-        <div class="grid-item">
-          <img src="assets/images/Aura Staffing.jpeg" alt="Aura Staffing">
-          <h3>Aura Staffing</h3>
-          <a href="javascript:void(0);" class="view-details"
-            data-target="popup8">View Details</a>
+          <aside class="hero-card" data-aos="fade-up" data-aos-delay="120">
+            <h2>Project focus areas</h2>
+            <ul class="skill-list">
+              <li>Custom UI implementation</li>
+              <li>Plugin and theme customization</li>
+              <li>WooCommerce workflows</li>
+              <li>Recruitment and staffing platforms</li>
+              <li>Structured content systems</li>
+              <li>Responsive optimization</li>
+            </ul>
+          </aside>
         </div>
       </section>
-      <div id="popup1" class="popup">
-        <div class="popup-content">
-          <span class="close">&times;</span>
-          <h2>Contact Form to API</h2>
-          <p><strong>Website:</strong> <a
-              href="https://www.contactformtoapi.com/"
-              target="_blank">contactformtoapi.com</a></p>
-          <p>
-            A specialized solution built for connecting Contact Form 7
-            submissions directly to third-party APIs. This project was designed
-            using Elementor, and extensively utilizes Custom Post Types to
-            manage API connections and logs.
-          </p>
-          <p>
-            I developed custom WordPress plugins and integrated WooCommerce for
-            premium API subscription plans. The site also includes a dynamic
-            pricing table, documentation pages, and user-friendly dashboard
-            features for managing endpoints.
-          </p>
-          <ul>
-            <li>✅ Built with Elementor & custom add-ons</li>
-            <li>✅ Integrated Contact Form 7 + API logic</li>
-            <li>✅ WooCommerce-enabled plan management</li>
-            <li>✅ Custom post types for API endpoints</li>
-            <li>✅ Responsive and optimized for performance</li>
-          </ul>
-        </div>
-      </div>
 
-      <div id="popup2" class="popup">
-        <div class="popup-content">
-          <span class="close">&times;</span>
-          <h2>iDalko</h2>
-          <p><strong>Website:</strong> <a href="https://idalko.com/"
-              target="_blank">idalko.com</a></p>
-          <p>
-            iDalko is a leading provider of enterprise-grade integration
-            solutions for Jira. I was responsible for redeveloping and enhancing
-            their WordPress site to better reflect their technical authority and
-            support their B2B lead generation strategy.
-          </p>
-          <p>
-            The site was built using Elementor Pro along with custom WordPress
-            templates and add-ons. I implemented flexible and reusable content
-            blocks using Custom Post Types, integrated WooCommerce to manage
-            services and downloadable assets, and ensured seamless
-            responsiveness across all devices.
-          </p>
-          <p>
-            A major enhancement included the creation of a fully responsive mega
-            menu with multi-level navigation, allowing visitors to easily browse
-            through complex product offerings. Additionally, I focused on
-            optimizing performance and SEO to improve visibility and load times.
-          </p>
-          <ul>
-            <li>✅ Developed with Elementor Pro & custom templates</li>
-            <li>✅ Mega Menu system for intuitive multi-level navigation</li>
-            <li>✅ WooCommerce setup for services & digital assets</li>
-            <li>✅ Custom Post Types for structured, reusable content blocks</li>
-            <li>✅ Fully responsive layout and performance-optimized UX</li>
-            <li>✅ On-page SEO implementation for higher rankings</li>
-          </ul>
-        </div>
-      </div>
+      <section class="content-section">
+        <div class="container">
+          <div class="projects-grid">
+            <article class="project-card" data-aos="fade-up">
+              <img src="assets/images/cf7toanyapi.png" alt="Contact Form to API">
+              <div class="project-body">
+                <h3>Contact Form to API</h3>
+                <p class="project-meta">API-driven plugin workflow with Elementor, WooCommerce plans, and custom endpoint management.</p>
+                <a href="#" class="view-details" data-target="popup1">View Details</a>
+              </div>
+            </article>
 
-      <div id="popup3" class="popup">
-        <div class="popup-content">
-          <span class="close">&times;</span>
-          <h2>Standby24</h2>
-          <p><strong>Website:</strong> <a href="https://standby24.co.uk/"
-              target="_blank">standby24.co.uk</a></p>
-          <p>Standby24 UK is a professional healthcare staffing agency providing
-            job opportunities and workforce solutions across the UK. This
-            website was fully designed and developed from scratch, following a
-            performance-first approach and business-aligned UX goals.</p>
-          <p>I created a unique, custom-designed **header and footer layout**
-            that reflects the brand’s professionalism while enhancing usability
-            and accessibility. The entire website was built using **Elementor**
-            and extended with **Ultimate Add-ons** and other relevant widgets to
-            ensure flexibility and responsiveness across all devices and screen
-            sizes.</p>
-          <p>The site structure is powered by **Custom Post Types (CPTs)** and
-            **Advanced Custom Fields (ACF)** to allow administrators to manage
-            job listings, testimonials, and dynamic sections with ease. Each
-            section was crafted with reusable and scalable logic for content
-            control and layout consistency.</p>
-          <p>I integrated **Contact Form 7** across various touchpoints for
-            candidate and client inquiries, and configured **SMTP email delivery
-            via Microsoft Outlook** to ensure secure, reliable mail delivery. In
-            addition, I implemented an **Advanced Database logging system** to
-            track and store every form submission directly within the WordPress
-            dashboard — making data export and review seamless for the
-            client.</p>
-          <ul>
-            <li>✅ Fully custom-built design using Elementor and Ultimate
-              Add-ons</li>
-            <li>✅ Branded, responsive header & footer developed from
-              scratch</li>
-            <li>✅ CPT + ACF integration for dynamic job listings and
-              sections</li>
-            <li>✅ Contact Form 7 setup with Microsoft Outlook SMTP mailer</li>
-            <li>✅ Advanced DB record keeping for form entry logging &
-              exports</li>
-            <li>✅ Optimized for mobile, tablet, and all modern browsers</li>
-          </ul>
-        </div>
-      </div>
+            <article class="project-card" data-aos="fade-up" data-aos-delay="40">
+              <img src="assets/images/iDalko.jpeg" alt="iDalko">
+              <div class="project-body">
+                <h3>iDalko</h3>
+                <p class="project-meta">Enterprise-style rebuild with mega menu architecture, SEO improvements, and reusable templates.</p>
+                <a href="#" class="view-details" data-target="popup2">View Details</a>
+              </div>
+            </article>
 
-      <div id="popup4" class="popup">
-        <div class="popup-content">
-          <span class="close">&times;</span>
-          <h2>OneCall24 Healthcare</h2>
-          <p><strong>Website:</strong> <a
-              href="https://onecall24healthcare.co.uk/"
-              target="_blank">onecall24healthcare.co.uk</a></p>
-          <p>
-            This project was all about building a tailored digital recruitment
-            experience from the ground up — one that supports both candidates
-            and administrators in the fast-paced healthcare staffing industry.
-          </p>
-          <p>
-            I began with a custom design approach using <strong>Elementor
-              Pro</strong> and <strong>Ultimate Add-ons</strong> to create a
-            clean, professional interface, with strong calls-to-action and
-            mobile-friendly layouts. The goal: make job search and registration
-            seamless on any device.
-          </p>
-          <p>
-            On the backend, I developed a robust architecture using
-            <strong>Custom Post Types (CPTs)</strong> and <strong>Advanced
-              Custom Fields (ACF)</strong>, giving the admin team complete
-            control over job listings, team bios, and informational sections —
-            without any need to touch code.
-          </p>
-          <p>
-            I integrated multiple <strong>Contact Form 7</strong> forms across
-            the site, each routed securely through <strong>SMTP (Microsoft
-              Outlook)</strong> to ensure enterprise-grade deliverability. To
-            support internal operations, I set up a smart <strong>form
-              submission logging system</strong> that captures and stores every
-            entry within the WordPress dashboard — enabling quick access and
-            export when needed.
-          </p>
-          <p>
-            This site was built with speed, clarity, and conversion in mind —
-            tailored for both large-screen desktops and quick mobile visits by
-            frontline workers. From user flow to data structure, every detail
-            was built with the audience in mind.
-          </p>
-          <ul>
-            <li>✅ Elementor Pro with a modern, responsive UI</li>
-            <li>✅ CPT + ACF framework for full content control</li>
-            <li>✅ Outlook-integrated SMTP for secure form delivery</li>
-            <li>✅ Dynamic form tracking with in-dashboard database logging</li>
-            <li>✅ Designed for performance and mobile accessibility</li>
-          </ul>
-        </div>
-      </div>
+            <article class="project-card" data-aos="fade-up" data-aos-delay="80">
+              <img src="assets/images/Standby24.jpeg" alt="Standby24">
+              <div class="project-body">
+                <h3>Standby24</h3>
+                <p class="project-meta">Custom recruitment platform with CPT, ACF, SMTP delivery, and dashboard data logging.</p>
+                <a href="#" class="view-details" data-target="popup3">View Details</a>
+              </div>
+            </article>
 
-      <div id="popup5" class="popup">
-        <div class="popup-content">
-          <span class="close">&times;</span>
-          <h2>IMS Nhance</h2>
-          <p><strong>Website:</strong> <a href="https://imsnhance.com/"
-              target="_blank">imsnhance.com</a></p>
-          <p>
-            IMS Nhance is a digital transformation and business services
-            provider. I was brought in to design and build a custom WordPress
-            website that delivers both functional flexibility and a modern
-            digital experience for their clients.
-          </p>
-          <p>
-            The site was developed using <strong>Elementor Pro</strong>
-            alongside <strong>Ultimate Add-ons</strong> to craft intuitive,
-            reusable content blocks. I structured all service offerings, case
-            studies, and internal content using <strong>Custom Post Types
-              (CPTs)</strong> and <strong>Advanced Custom Fields (ACF)</strong>
-            — allowing the admin team to manage and scale site content easily.
-          </p>
-          <p>
-            Several components such as dynamic tabs, filterable sections, and
-            interactive layouts were built manually using <strong>custom HTML,
-              CSS, and JavaScript</strong> to ensure maximum control and
-            lightweight performance. This allowed us to break past the
-            limitations of page builders and create fully tailored experiences
-            across pages.
-          </p>
-          <p>
-            Contact Form 7 was used to capture inquiries across the site, all
-            routed via <strong>Microsoft Outlook SMTP</strong> to ensure secure,
-            enterprise-level deliverability. A custom backend logic was added to
-            store form data directly in the WordPress database for reporting and
-            backup purposes.
-          </p>
-          <ul>
-            <li>✅ Elementor Pro UI with Ultimate Add-ons</li>
-            <li>✅ CPT + ACF setup for service scalability</li>
-            <li>✅ Custom code (HTML/CSS/JS) for dynamic sections</li>
-            <li>✅ Contact Form 7 with secure SMTP integration</li>
-            <li>✅ Backend form logging system for admin access</li>
-            <li>✅ Fully responsive & performance-optimized build</li>
-          </ul>
-        </div>
-      </div>
+            <article class="project-card" data-aos="fade-up" data-aos-delay="120">
+              <img src="assets/images/OneCall24 Healthcare.jpeg" alt="OneCall24 Healthcare">
+              <div class="project-body">
+                <h3>OneCall24 Healthcare</h3>
+                <p class="project-meta">Healthcare staffing site with strong conversion paths, structured admin content, and secure form routing.</p>
+                <a href="#" class="view-details" data-target="popup4">View Details</a>
+              </div>
+            </article>
 
-      <div id="popup6" class="popup">
-        <div class="popup-content">
-          <span class="close">&times;</span>
-          <h2>OneCall24</h2>
-          <p><strong>Website:</strong> <a href="https://onecall24.co.uk/"
-              target="_blank">onecall24.co.uk</a></p>
-          <p>
-            OneCall24 is one of the UK’s leading medical staffing agencies, and
-            this site was built to support its high-traffic operations and
-            provide clear, user-friendly access to job opportunities and
-            services.
-          </p>
-          <p>
-            The site was developed using the <strong>WP Bakery Page
-              Builder</strong>, allowing for rapid layout creation with custom
-            styling layers and consistency across dozens of pages. I created a
-            structured layout with flexible content blocks to make ongoing
-            updates easy for the internal team.
-          </p>
-          <p>
-            For lead capture, I integrated <strong>WPForms</strong> to manage
-            multiple contact and registration forms, and configured them with
-            custom conditional logic to ensure submissions were routed
-            appropriately. To enhance credibility and user trust, I embedded a
-            live feed of <strong>Google Reviews</strong> directly onto the site
-            — allowing new visitors to see real client feedback in real time.
-          </p>
-          <p>
-            I also implemented several UI enhancements using <strong>custom
-              HTML, CSS, and JavaScript</strong> to refine call-to-action
-            buttons, animation triggers, and sticky headers — improving the user
-            experience without compromising performance.
-          </p>
-          <ul>
-            <li>✅ Developed with WP Bakery Page Builder</li>
-            <li>✅ WPForms with smart logic for lead capture</li>
-            <li>✅ Google Reviews API for live testimonials</li>
-            <li>✅ Custom CSS/JS for UI enhancements & responsiveness</li>
-            <li>✅ Consistent design and scalable page structure</li>
-            <li>✅ Optimized for speed, SEO, and multi-device access</li>
-          </ul>
-        </div>
-      </div>
+            <article class="project-card" data-aos="fade-up" data-aos-delay="160">
+              <img src="assets/images/IMS nHance.jpeg" alt="IMS Nhance">
+              <div class="project-body">
+                <h3>IMS Nhance</h3>
+                <p class="project-meta">Digital services website with custom interactive sections, CPT setup, and backend form storage.</p>
+                <a href="#" class="view-details" data-target="popup5">View Details</a>
+              </div>
+            </article>
 
-      <div id="popup7" class="popup">
-        <div class="popup-content">
-          <span class="close">&times;</span>
-          <h2>OneCall24 Education</h2>
-          <p><strong>Website:</strong> <a
-              href="https://onecall24education.co.uk/"
-              target="_blank">onecall24education.co.uk</a></p>
-          <p>
-            OneCall24 Education is a division of OneCall24 focused on connecting
-            schools and educational institutions with trusted teaching and
-            support staff. I was responsible for delivering a custom-built,
-            user-centric WordPress site that reflects the professionalism and
-            care of the brand.
-          </p>
-          <p>
-            The project was developed using <strong>Elementor Pro</strong> along
-            with <strong>Premium Addons</strong> and <strong>Ultimate
-              Addons</strong> to build flexible, reusable content sections. From
-            job categories to team overviews and dynamic call-to-actions, each
-            part of the layout was designed for both clarity and engagement.
-          </p>
-          <p>
-            For form functionality, I implemented <strong>Gravity Forms</strong>
-            to handle job applications, contact forms, and candidate
-            registrations. These forms included smart conditional fields,
-            dynamic success messages, and spam protection. All form entries are
-            logged in the admin dashboard and can be exported for reporting.
-          </p>
-          <p>
-            I also built a completely <strong>custom frontend interface</strong>
-            to match OneCall24’s educational brand identity — including advanced
-            sections for candidate testimonials, location coverage maps, and key
-            service highlights. Subtle animations and scroll effects were added
-            to elevate user engagement and interactivity.
-          </p>
-          <ul>
-            <li>✅ Built with Elementor Pro + Premium and Ultimate Addons</li>
-            <li>✅ Gravity Forms for applications, contact, and candidate
-              intake</li>
-            <li>✅ Custom UI design for educational focus and user clarity</li>
-            <li>✅ Interactive sections with animations and scroll effects</li>
-            <li>✅ Fully responsive and optimized for mobile and tablet</li>
-            <li>✅ Backend form entry logging and export features</li>
-          </ul>
-        </div>
-      </div>
+            <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/images/OneCall24.jpeg" alt="OneCall24">
+              <div class="project-body">
+                <h3>OneCall24</h3>
+                <p class="project-meta">High-traffic staffing website using WP Bakery, WPForms, and custom front-end enhancements.</p>
+                <a href="#" class="view-details" data-target="popup6">View Details</a>
+              </div>
+            </article>
 
-      <div id="popup8" class="popup">
-        <div class="popup-content">
-          <span class="close">&times;</span>
-          <h2>Aura Staffing</h2>
-          <p><strong>Website:</strong> <a
-              href="https://imsnhance.in/aurastaffing/"
-              target="_blank">imsnhance.in/aurastaffing</a></p>
-          <p>
-            Aura Staffing is a healthcare recruitment platform crafted to
-            connect top-tier professionals with healthcare opportunities across
-            the country. The website was developed to deliver both high
-            performance and flexible content management for the client’s
-            evolving business needs.
-          </p>
-          <p>
-            The site was built using <strong>Elementor Pro</strong>, alongside
-            <strong>Premium Addons</strong> and <strong>Ultimate
-              Addons</strong>, to create modular, animated layouts. The
-            interface was designed to be fully responsive and visually intuitive
-            across all screen sizes.
-          </p>
-          <p>
-            For form management, I integrated both <strong>Contact Form
-              7</strong> and <strong>Ninja Forms</strong> to serve different
-            workflows — including inquiry handling, candidate submissions, and
-            multi-step interactions. These were styled to match the brand and
-            embedded across key sections to increase conversions.
-          </p>
-          <p>
-            To bypass the limitations of the parent theme, I created several
-            <strong>custom templates</strong> using a child theme approach. This
-            allowed me to control layout rendering, override default behaviors,
-            and build in page-specific structures that Elementor alone couldn’t
-            fully handle. The result is a stable, scalable, and easily
-            maintainable website that performs well across devices.
-          </p>
-          <ul>
-            <li>✅ Built with Elementor Pro + Premium & Ultimate Addons</li>
-            <li>✅ Contact Form 7 and Ninja Forms for multiple use cases</li>
-            <li>✅ Custom page templates for layout precision</li>
-            <li>✅ Child theme setup for safe code and layout overrides</li>
-            <li>✅ Fully responsive and optimized for all screens</li>
-            <li>✅ Designed for clarity, accessibility, and performance</li>
-          </ul>
+            <article class="project-card" data-aos="fade-up" data-aos-delay="240">
+              <img src="assets/images/Onecall24 Education.jpeg" alt="OneCall24 Education">
+              <div class="project-body">
+                <h3>OneCall24 Education</h3>
+                <p class="project-meta">Education-focused platform with custom UI, Gravity Forms workflows, and conversion-focused content sections.</p>
+                <a href="#" class="view-details" data-target="popup7">View Details</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-aos="fade-up" data-aos-delay="280">
+              <img src="assets/images/Aura Staffing.jpeg" alt="Aura Staffing">
+              <div class="project-body">
+                <h3>Aura Staffing</h3>
+                <p class="project-meta">Responsive staffing website with template overrides, Elementor layouts, and multi-form integrations.</p>
+                <a href="#" class="view-details" data-target="popup8">View Details</a>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
+
+        <div id="popup1" class="popup" aria-hidden="true">
+          <div class="popup-content">
+            <button class="close" type="button" aria-label="Close popup">&times;</button>
+            <h2>Contact Form to API</h2>
+            <p><strong>Website:</strong> <a href="https://www.contactformtoapi.com/" target="_blank" rel="noopener noreferrer">contactformtoapi.com</a></p>
+            <p>A specialized solution built for connecting Contact Form 7 submissions directly to third-party APIs. This project was designed using Elementor and uses Custom Post Types to manage API connections and logs.</p>
+            <p>I developed custom WordPress plugins and integrated WooCommerce for premium API subscription plans. The site also includes a dynamic pricing table, documentation pages, and a user-friendly dashboard for managing endpoints.</p>
+            <ul>
+              <li>Built with Elementor and custom add-ons</li>
+              <li>Integrated Contact Form 7 with API logic</li>
+              <li>WooCommerce-enabled plan management</li>
+              <li>Custom post types for API endpoints</li>
+              <li>Responsive and optimized for performance</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="popup2" class="popup" aria-hidden="true">
+          <div class="popup-content">
+            <button class="close" type="button" aria-label="Close popup">&times;</button>
+            <h2>iDalko</h2>
+            <p><strong>Website:</strong> <a href="https://idalko.com/" target="_blank" rel="noopener noreferrer">idalko.com</a></p>
+            <p>iDalko is a leading provider of enterprise-grade integration solutions for Jira. I was responsible for redeveloping and enhancing their WordPress site to better reflect their technical authority and support their B2B lead generation strategy.</p>
+            <p>The site was built using Elementor Pro along with custom WordPress templates and add-ons. I implemented flexible and reusable content blocks using Custom Post Types, integrated WooCommerce to manage services and downloadable assets, and ensured seamless responsiveness across all devices.</p>
+            <p>A major enhancement included the creation of a fully responsive mega menu with multi-level navigation, allowing visitors to browse through complex product offerings more easily. I also focused on performance and SEO improvements to support load times and visibility.</p>
+            <ul>
+              <li>Developed with Elementor Pro and custom templates</li>
+              <li>Mega menu system for multi-level navigation</li>
+              <li>WooCommerce setup for services and digital assets</li>
+              <li>Custom Post Types for reusable content blocks</li>
+              <li>Responsive layout and performance-focused UX</li>
+              <li>On-page SEO implementation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="popup3" class="popup" aria-hidden="true">
+          <div class="popup-content">
+            <button class="close" type="button" aria-label="Close popup">&times;</button>
+            <h2>Standby24</h2>
+            <p><strong>Website:</strong> <a href="https://standby24.co.uk/" target="_blank" rel="noopener noreferrer">standby24.co.uk</a></p>
+            <p>Standby24 UK is a professional healthcare staffing agency providing job opportunities and workforce solutions across the UK. This website was fully designed and developed from scratch with a performance-first approach and business-aligned UX goals.</p>
+            <p>I created a custom header and footer layout that reflects the brand's professionalism while improving usability and accessibility. The website was built using Elementor and extended with Ultimate Add-ons for flexibility and responsiveness across all devices.</p>
+            <p>The site structure is powered by Custom Post Types and Advanced Custom Fields to allow administrators to manage job listings, testimonials, and dynamic sections easily. I also integrated Contact Form 7, Microsoft Outlook SMTP delivery, and an advanced database logging system for form submissions.</p>
+            <ul>
+              <li>Custom design built with Elementor and Ultimate Add-ons</li>
+              <li>Branded responsive header and footer</li>
+              <li>CPT and ACF integration for dynamic job listings</li>
+              <li>Contact Form 7 with Microsoft Outlook SMTP</li>
+              <li>Database logging for form entry storage and export</li>
+              <li>Optimized for mobile, tablet, and modern browsers</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="popup4" class="popup" aria-hidden="true">
+          <div class="popup-content">
+            <button class="close" type="button" aria-label="Close popup">&times;</button>
+            <h2>OneCall24 Healthcare</h2>
+            <p><strong>Website:</strong> <a href="https://onecall24healthcare.co.uk/" target="_blank" rel="noopener noreferrer">onecall24healthcare.co.uk</a></p>
+            <p>This project focused on building a tailored digital recruitment experience that supports both candidates and administrators in the fast-paced healthcare staffing industry.</p>
+            <p>I used Elementor Pro and Ultimate Add-ons to create a clean, professional interface with clear calls to action and mobile-friendly layouts. On the backend, I developed a robust content architecture using Custom Post Types and Advanced Custom Fields.</p>
+            <p>I also integrated multiple Contact Form 7 forms routed securely through Microsoft Outlook SMTP and added a form submission logging system inside the WordPress dashboard for easy access and export.</p>
+            <ul>
+              <li>Elementor Pro with a modern responsive UI</li>
+              <li>CPT and ACF framework for full content control</li>
+              <li>Outlook-integrated SMTP for secure form delivery</li>
+              <li>Dynamic form tracking with dashboard logging</li>
+              <li>Designed for performance and mobile accessibility</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="popup5" class="popup" aria-hidden="true">
+          <div class="popup-content">
+            <button class="close" type="button" aria-label="Close popup">&times;</button>
+            <h2>IMS Nhance</h2>
+            <p><strong>Website:</strong> <a href="https://imsnhance.com/" target="_blank" rel="noopener noreferrer">imsnhance.com</a></p>
+            <p>IMS Nhance is a digital transformation and business services provider. I was brought in to design and build a custom WordPress website that delivers both functional flexibility and a modern digital experience.</p>
+            <p>The site was developed using Elementor Pro alongside Ultimate Add-ons to craft intuitive content blocks. I structured service offerings, case studies, and internal content using Custom Post Types and Advanced Custom Fields.</p>
+            <p>Several components such as dynamic tabs, filterable sections, and interactive layouts were built manually with custom HTML, CSS, and JavaScript. Contact Form 7 submissions were routed via Microsoft Outlook SMTP and stored in the WordPress database for reporting and backup.</p>
+            <ul>
+              <li>Elementor Pro UI with Ultimate Add-ons</li>
+              <li>CPT and ACF setup for service scalability</li>
+              <li>Custom code for dynamic sections</li>
+              <li>Contact Form 7 with secure SMTP integration</li>
+              <li>Backend form logging for admin access</li>
+              <li>Responsive and performance-optimized build</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="popup6" class="popup" aria-hidden="true">
+          <div class="popup-content">
+            <button class="close" type="button" aria-label="Close popup">&times;</button>
+            <h2>OneCall24</h2>
+            <p><strong>Website:</strong> <a href="https://onecall24.co.uk/" target="_blank" rel="noopener noreferrer">onecall24.co.uk</a></p>
+            <p>OneCall24 is one of the UK's leading medical staffing agencies, and this site was built to support high-traffic operations and provide clear access to job opportunities and services.</p>
+            <p>The site was developed using WP Bakery Page Builder, allowing rapid layout creation with custom styling layers and consistency across many pages. I created a structured layout with flexible content blocks for easy ongoing updates.</p>
+            <p>For lead capture, I integrated WPForms with conditional logic and embedded live Google Reviews to strengthen trust. I also implemented UI enhancements using custom HTML, CSS, and JavaScript to improve call-to-action behavior, animation triggers, and sticky header interactions.</p>
+            <ul>
+              <li>Developed with WP Bakery Page Builder</li>
+              <li>WPForms with smart logic for lead capture</li>
+              <li>Google Reviews API for live testimonials</li>
+              <li>Custom CSS and JavaScript for UI enhancements</li>
+              <li>Consistent design and scalable page structure</li>
+              <li>Optimized for speed, SEO, and multi-device access</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="popup7" class="popup" aria-hidden="true">
+          <div class="popup-content">
+            <button class="close" type="button" aria-label="Close popup">&times;</button>
+            <h2>OneCall24 Education</h2>
+            <p><strong>Website:</strong> <a href="https://onecall24education.co.uk/" target="_blank" rel="noopener noreferrer">onecall24education.co.uk</a></p>
+            <p>OneCall24 Education connects schools and educational institutions with trusted teaching and support staff. I delivered a custom-built, user-centric WordPress site designed to reflect the professionalism and care of the brand.</p>
+            <p>The project was developed using Elementor Pro along with Premium Addons and Ultimate Addons to build flexible, reusable content sections. I implemented Gravity Forms to handle job applications, contact forms, and candidate registrations with conditional fields and export-ready entry logging.</p>
+            <p>I also built a custom frontend interface to match the brand identity, including testimonial sections, coverage maps, and service highlights, supported by subtle animations and scroll effects.</p>
+            <ul>
+              <li>Built with Elementor Pro plus Premium and Ultimate Addons</li>
+              <li>Gravity Forms for applications and candidate intake</li>
+              <li>Custom UI design for educational focus and user clarity</li>
+              <li>Interactive sections with animation and scroll effects</li>
+              <li>Responsive for mobile and tablet use</li>
+              <li>Backend form entry logging and export support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="popup8" class="popup" aria-hidden="true">
+          <div class="popup-content">
+            <button class="close" type="button" aria-label="Close popup">&times;</button>
+            <h2>Aura Staffing</h2>
+            <p><strong>Website:</strong> <a href="https://imsnhance.in/aurastaffing/" target="_blank" rel="noopener noreferrer">imsnhance.in/aurastaffing</a></p>
+            <p>Aura Staffing is a healthcare recruitment platform built to connect professionals with opportunities across the country. The site was developed for strong performance and flexible content management.</p>
+            <p>The site uses Elementor Pro with Premium Addons and Ultimate Addons to create modular, animated layouts. For form management, I integrated both Contact Form 7 and Ninja Forms to support multiple workflows, including inquiries, candidate submissions, and multi-step interactions.</p>
+            <p>To bypass limitations of the parent theme, I created custom templates using a child theme approach. This gave better control over layout rendering, page-specific structures, and long-term maintainability.</p>
+            <ul>
+              <li>Built with Elementor Pro plus Premium and Ultimate Addons</li>
+              <li>Contact Form 7 and Ninja Forms for multiple use cases</li>
+              <li>Custom page templates for layout precision</li>
+              <li>Child theme setup for safe overrides</li>
+              <li>Responsive and optimized for all screens</li>
+              <li>Designed for clarity, accessibility, and performance</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer data-aos="fade-up">
-      <p>© 2025 Darshit Rajyaguru • <a href="mailto:darshitrajyaguru@gmail.com"
-          style="color:white;">darshitrajyaguru@gmail.com</a></p>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-card" data-aos="fade-up">
+          <div class="footer-copy">
+            <p>&copy; 2026 Darshit Rajyaguru. Selected client work across staffing, SaaS, healthcare, and custom WordPress solutions.</p>
+          </div>
+          <div class="footer-copy">
+            <a href="mailto:darshitrajyaguru@gmail.com">darshitrajyaguru@gmail.com</a>
+          </div>
+        </div>
+      </div>
     </footer>
+  </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    AOS.init({ duration: 1000, once: true });
-  
-    document.addEventListener("DOMContentLoaded", function() {
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 900, once: true, offset: 60 });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".nav-links");
+      const overlay = document.querySelector(".menu-overlay");
       const buttons = document.querySelectorAll(".view-details");
       const popups = document.querySelectorAll(".popup");
-      const closeBtns = document.querySelectorAll(".popup .close");
-  
-      buttons.forEach(btn => {
-        btn.addEventListener("click", function() {
-          const targetId = this.getAttribute("data-target");
+      const closeButtons = document.querySelectorAll(".close");
+
+      function closeMenu() {
+        if (!toggle || !nav || !overlay) {
+          return;
+        }
+        toggle.classList.remove("is-open");
+        nav.classList.remove("is-open");
+        overlay.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
+      }
+
+      function openMenu() {
+        if (!toggle || !nav || !overlay) {
+          return;
+        }
+        toggle.classList.add("is-open");
+        nav.classList.add("is-open");
+        overlay.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+        document.body.classList.add("menu-open");
+      }
+
+      function closePopup(popup) {
+        popup.classList.remove("active");
+        popup.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("popup-open");
+      }
+
+      function openPopup(popup) {
+        popup.classList.add("active");
+        popup.setAttribute("aria-hidden", "false");
+        document.body.classList.add("popup-open");
+      }
+
+      if (toggle && nav && overlay) {
+        toggle.addEventListener("click", function () {
+          if (nav.classList.contains("is-open")) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        overlay.addEventListener("click", closeMenu);
+
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            const href = link.getAttribute("href");
+            if (!href) {
+              return;
+            }
+            event.preventDefault();
+            closeMenu();
+            window.setTimeout(function () {
+              window.location.href = href;
+            }, 120);
+          });
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 900) {
+            closeMenu();
+          }
+        });
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+          const targetId = button.getAttribute("data-target");
           const popup = document.getElementById(targetId);
           if (popup) {
-            popup.classList.add("active");
+            openPopup(popup);
           }
         });
       });
-  
-      closeBtns.forEach(btn => {
-        btn.addEventListener("click", function() {
-          const popup = this.closest(".popup");
-          popup.classList.remove("active");
-        });
-      });
-  
-      // Optional: close popup when clicking outside content
-      popups.forEach(popup => {
-        popup.addEventListener("click", function(e) {
-          if (e.target === this) {
-            this.classList.remove("active");
+
+      closeButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          const popup = button.closest(".popup");
+          if (popup) {
+            closePopup(popup);
           }
         });
+      });
+
+      popups.forEach(function (popup) {
+        popup.addEventListener("click", function (event) {
+          if (event.target === popup) {
+            closePopup(popup);
+          }
+        });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+        if (event.key === "Escape") {
+          popups.forEach(function (popup) {
+            if (popup.classList.contains("active")) {
+              closePopup(popup);
+            }
+          });
+        }
       });
     });
   </script>
-
-  </body>
+</body>
 </html>

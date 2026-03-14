@@ -1,158 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Contact</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vxY3pzyGupkli5GQImsS1a3MGYRVX8OaCZT7x4qITfZ9r9Yh7DYzrRAv9XGuDrW9M1h84hIpjXZTX3k3rYV7Ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Darshit Rajyaguru for WordPress development, custom site builds, WooCommerce work, and ongoing website support.">
+  <title>Contact | Darshit Rajyaguru</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Playfair Display', serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9fafc;
-      color: #334464;
-    }
-    header, footer {
-      background-color: #334464;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #2f5c73;
-      margin-top: 1rem;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 3rem 5%;
-    }
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-    .contact-card {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-      text-align: center;
-      flex: 1 1 calc(33.333% - 2rem);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .contact-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-    }
-    .contact-card i {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #2f5c73;
-    }
-    .contact-card a {
-      color: #2f5c73;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1.05em;
-      margin-top: 0.5rem;
-      display: block;
-      text-align: center;
-    }
-    .contact-card a:hover {
-      text-decoration: underline;
-    }
-    .contact-icon {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 1rem;
-      object-fit: contain;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    @media (max-width: 900px) {
-      .contact-card {
-        flex: 1 1 calc(50% - 2rem);
-      }
-    }
-    @media (max-width: 600px) {
-      .contact-card {
-        flex: 1 1 100%;
-      }
-    }
-  </style>
 </head>
 <body>
-  <header data-aos="fade-down">
-    <img src="assets/images/profile.jpg" alt="Profile Photo" />
-    <h1 style="margin: 0.5rem 0;">Darshit Rajyaguru</h1>
-    <p style="margin-bottom: 1rem;">Let's connect to discuss.</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrap" data-aos="fade-down">
+          <a class="brand" href="index.html">
+            <img src="assets/images/profile.jpg" alt="Darshit Rajyaguru" class="brand-mark">
+            <div class="brand-text">
+              <strong>Darshit Rajyaguru</strong>
+              <span>WordPress Expert • Core Contributor</span>
+            </div>
+          </a>
+          <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+            <span></span>
+          </button>
+          <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a class="active" href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="menu-overlay"></div>
 
-  <main>
-    <h2 style="text-align: center; color: #2f5c73;">Connect with Me</h2>
-    <div class="contact-grid" data-aos="fade-up">
-      <div class="contact-card">
-        <img src="assets/images/email.png" alt="Email" class="contact-icon" />
-        <a href="mailto:darshitrajyaguru@gmail.com">darshitrajyaguru@gmail.com</a>
-      </div>
-      <div class="contact-card">
-        <img src="assets/images/phone.png" alt="Phone" class="contact-icon" />
-        <a href="tel:+918460388441">+91 84603 88441</a>
-      </div>
-      <div class="contact-card">
-        <img src="assets/images/linkedin.png" alt="LinedIn" class="contact-icon" />
-        <a href="https://linkedin.com/in/darshit-rajyaguru" target="_blank">LinkedIn Profile</a>
-      </div>
-      <div class="contact-card">
-        <img src="assets/images/github.png" alt="GitHub" class="contact-icon" />
-        <a href="https://github.com/DarshitRajyaguru" target="_blank">GitHub Profile</a>
-      </div>
-      <div class="contact-card">
-        <img src="assets/images/wordpress.png" alt="WordPress" class="contact-icon" />
-        <a href="https://profiles.wordpress.org/darshitrajyaguru97/" target="_blank">WordPress Profile</a>
-      </div>
-      <div class="contact-card">
-        <img src="assets/images/cv.png" alt="CV" class="contact-icon" />
-        <a href="assets/Darshit-Rajyaguru-CV.pdf" download>Download CV</a>
-      </div>
-    </div>
-  </main>
+    <main>
+      <section class="hero">
+        <div class="container page-panel">
+          <div class="hero-copy" data-aos="fade-up">
+            <div class="eyebrow">Let's Connect</div>
+            <h1>Ready to build a stronger WordPress presence?</h1>
+            <p class="lead">If you need a reliable developer for a custom website, redesign, performance improvement, or plugin-based workflow, I would love to discuss your project.</p>
+            <div class="button-row">
+              <a class="button button-primary" href="mailto:darshitrajyaguru@gmail.com">Email Me</a>
+              <a class="button button-secondary" href="projects.html">View Portfolio</a>
+            </div>
+          </div>
 
-  <footer data-aos="fade-up">
-    <p>© 2025 Darshit Rajyaguru • <a href="mailto:darshitrajyaguru@gmail.com" style="color: white;">darshitrajyaguru@gmail.com</a></p>
-  </footer>
+          <aside class="hero-card" data-aos="fade-up" data-aos-delay="120">
+            <h2>Quick response channels</h2>
+            <p>You can reach me directly through email, phone, LinkedIn, GitHub, or my WordPress profile.</p>
+            <div class="metric-grid">
+              <div class="metric-card">
+                <strong>Email</strong>
+                <p>Best for project discussions and proposals.</p>
+              </div>
+              <div class="metric-card">
+                <strong>LinkedIn</strong>
+                <p>Professional connection and client outreach.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container">
+          <div class="section-heading" data-aos="fade-up">
+            <div>
+              <h2>Connect with me</h2>
+            </div>
+            <p>Every link below is kept simple and direct so clients can reach the right place quickly.</p>
+          </div>
+
+          <div class="contact-grid">
+            <article class="contact-card" data-aos="fade-up" data-aos-delay="40">
+              <img src="assets/images/email.png" alt="Email icon" class="contact-icon">
+              <h3>Email</h3>
+              <p>For new projects, revisions, and long-term WordPress support.</p>
+              <a class="contact-link" href="mailto:darshitrajyaguru@gmail.com">darshitrajyaguru@gmail.com</a>
+            </article>
+
+            <article class="contact-card" data-aos="fade-up" data-aos-delay="80">
+              <img src="assets/images/phone.png" alt="Phone icon" class="contact-icon">
+              <h3>Phone</h3>
+              <p>For quick discussions and direct client communication.</p>
+              <a class="contact-link" href="tel:+918460388441">+91 84603 88441</a>
+            </article>
+
+            <article class="contact-card" data-aos="fade-up" data-aos-delay="120">
+              <img src="assets/images/linkedin.png" alt="LinkedIn icon" class="contact-icon">
+              <h3>LinkedIn</h3>
+              <p>Connect professionally and review my profile history.</p>
+              <a class="contact-link" href="https://linkedin.com/in/darshit-rajyaguru" target="_blank" rel="noopener noreferrer">Visit Profile</a>
+            </article>
+
+            <article class="contact-card" data-aos="fade-up" data-aos-delay="160">
+              <img src="assets/images/github.png" alt="GitHub icon" class="contact-icon">
+              <h3>GitHub</h3>
+              <p>See public repositories and development activity.</p>
+              <a class="contact-link" href="https://github.com/DarshitRajyaguru" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            </article>
+
+            <article class="contact-card" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/images/wordpress.png" alt="WordPress icon" class="contact-icon">
+              <h3>WordPress.org</h3>
+              <p>View my WordPress profile and ecosystem presence.</p>
+              <a class="contact-link" href="https://profiles.wordpress.org/darshitrajyaguru97/" target="_blank" rel="noopener noreferrer">WordPress Profile</a>
+            </article>
+
+            <article class="contact-card" data-aos="fade-up" data-aos-delay="240">
+              <img src="assets/images/cv.png" alt="CV icon" class="contact-icon">
+              <h3>Resume / CV</h3>
+              <p>The previous download file is not present in this project, so this link now lets clients request the latest version directly.</p>
+              <a class="contact-link" href="mailto:darshitrajyaguru@gmail.com?subject=Request%20for%20Darshit%20Rajyaguru%20CV">Request CV by Email</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-card" data-aos="fade-up">
+          <div class="footer-copy">
+            <p>&copy; 2026 Darshit Rajyaguru. Available for WordPress development, redesigns, and performance-focused builds.</p>
+          </div>
+          <div class="footer-copy">
+            <a href="mailto:darshitrajyaguru@gmail.com">darshitrajyaguru@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 900, once: true, offset: 60 });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".nav-links");
+      const overlay = document.querySelector(".menu-overlay");
+
+      if (!toggle || !nav || !overlay) {
+        return;
+      }
+
+      function closeMenu() {
+        toggle.classList.remove("is-open");
+        nav.classList.remove("is-open");
+        overlay.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
+      }
+
+      function openMenu() {
+        toggle.classList.add("is-open");
+        nav.classList.add("is-open");
+        overlay.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+        document.body.classList.add("menu-open");
+      }
+
+      toggle.addEventListener("click", function () {
+        if (nav.classList.contains("is-open")) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      overlay.addEventListener("click", closeMenu);
+
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          const href = link.getAttribute("href");
+          if (!href) {
+            return;
+          }
+          event.preventDefault();
+          closeMenu();
+          window.setTimeout(function () {
+            window.location.href = href;
+          }, 120);
+        });
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 900) {
+          closeMenu();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+      });
+    });
   </script>
 </body>
 </html>
